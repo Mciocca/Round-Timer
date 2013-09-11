@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Round Timer!</title>
+	<link rel="stylesheet" type="text/css" href="round.css">
+	<script src="jquery.js"></script>
+	<script type="text/javascript" src="round.js"></script>
+	<link rel="icon" 
+      type="image/icp" 
+      href="favicon.ico">
+      <meta name="description" content="A round timer for use with martial arts, boxing, mma and interval training">
+</head>
+<body>
+
+	<div class="header">
+	<h1 class="wrapper">ROUND TIMER!</h1>
+	</div>
+
+
+	<div class="wrapper">
+		<h3 style="color:white;">White buttons add minutes, black buttons add seconds!</h3>
+		<div id="prepare">
+        <div id="ptimer"></div>
+	</div>
+     
+
+	<div id="round-counter">
+		<div id="time"><div id="tminutes">0</div>:<div id="tseconds">00</div></div>
+	</div>
+    <ul id="labels">
+	  <li><h4>Number of Rounds:</h4></li>
+	  <li><h4>Round Length:</h4></li>
+	  <li><h4>Rest:</h4></li>
+    </ul>
+
+	<div class="counter-items">
+
+		<div id="rounds" >
+		  <span class="text" id="total-rounds">0</span>
+          <div class="plus"></div>
+          <div class="minus"></div>
+
+        </div>
+        
+		<div id="round-time" >
+		  <span id="r-minutes">0</span>:<div id="r-seconds">00</div>
+		  <div class="plus"></div>
+          <div class="minus"></div>
+          <div class="plus-minutes" ></div>
+          <div class="minus-minutes"></div>
+        </div>
+          
+	    <div class="text" id="rest">
+	      <span id="rt-minutes">0</span>:<span id="rt-seconds">00</span></span>
+           <div class="plus"></div>
+          <div class="minus"></div>
+          <div class="plus-minutes"></div>
+          <div class="minus-minutes"></div>
+	    </div>
+
+	    </div>
+
+<div id="controls">
+	<div class="control-button" id="start"><span class="text">Start</span></div>
+	<div class="control-button" id="stop"><span class="text">Stop</span></div>
+
+</div>
+<audio id="bell"  autostart="false" src="sounds/bell.mp3" preload="auto" hidden="true">Your browser does not support HTML5 sounds. You will not hear any sounds! Please use <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a></audio>
+<audio id="gong" autostart="false" src="sounds/gong.mp3" preload="auto" hidden="true"></audio>
+<audio id="ten" autostart="false" src="sounds/alert.mp3" preload="auto" hidden="true"></audio>
+
+<footer>
+	<ul>
+		<li>Created by Michael Ciocca</li>
+		<li><a href="http://www.github.com/mciocca">Github</a></li>
+		<li><a href="http://www.michaelciocca.com">Blog</a></li>
+		<li><a href="http://www.twitter.com/mciocca89">Twitter</a></li>
+	</ul>
+</footer>
+
+</div>
+
+
+</body>
+</html>

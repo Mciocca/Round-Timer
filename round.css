@@ -1,0 +1,247 @@
+*{
+	font-family: sans-serif;
+	padding:0;
+	margin:0;
+	font-smooth:always;
+}
+body{
+	background-color: black;
+}
+
+.wrapper {
+width: 700px;
+margin: 0 auto;
+
+}
+h1	{
+	
+	height:25px;
+	color:red;
+	}
+h4{
+	color:white;
+}
+footer{
+	color:white;
+	margin-top:300px;
+
+}
+
+footer ul li {
+	float:right;
+	display:inline-block;
+	margin-right:25px;
+	color:white;
+	
+}
+footer ul li:first-child{
+	float:left;
+}
+
+footer ul li a{ 
+	text-decoration: none;
+	color:white;
+
+}
+
+footer ul li a:hover{ 
+	text-decoration: none;
+	color:blue;
+
+}
+
+/* Counter Labels */
+
+#labels {
+	list-style-type: none;
+	margin-left:0px;
+}
+#labels li:first-child{
+	display:inline;
+	float:left;
+	margin-right:100px;
+}
+
+#labels li:last-child{
+	display:inline;
+	float:left;
+	margin-left:600px;
+	margin-top:-19px;
+}
+
+.text {
+	font-weight: bold;
+}
+
+.header {
+	background-color:gray;
+	margin-top:0px;
+	padding-top:0px;
+	height:40px;
+	margin-bottom:30px;
+}
+
+/* Main Counter */
+
+#round-counter{
+   background-color:white;
+   height: 325px;
+   width:800px;
+   border-radius: 5px;
+   padding-right: 10px;
+   margin-bottom:10px;
+
+   }
+
+
+.counter-items{
+	margin-top:20px;
+	margin-left:-25px;
+	width: 1000px;
+
+}
+
+.counter-items  div  {
+   display:inline-block;
+   margin-right:25px;
+
+}
+
+#rounds {
+	
+	background-color: green; 
+	height:25px;
+	width:200px;
+	padding: 5px ;
+}
+
+#round-time {
+	
+	background-color: orange; 
+	height:25px;
+	width:300px;
+	padding: 5px ;
+	font-weight: bold;
+}
+
+#rest {
+	
+	background-color: red; 
+	height:25px;
+	width:300px;
+	padding: 5px ;
+}
+
+.plus {
+	float:right;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid black;
+}
+
+.minus {
+	float:right;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	
+	border-top: 10px solid black;
+
+}
+
+.minus-minutes {
+	float:right;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid white;
+
+}
+
+
+
+.plus-minutes{
+	float:right;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid white;
+}
+
+/* Controls */
+ 
+#controls {
+	margin-right: -200px;
+	
+}
+
+.control-button {
+	height:25px;
+	background-color:#5a4e51;
+	border-radius: 5px;
+	color:white;
+	display:inline-block;
+	float:right;
+	margin-right: 10px;
+	margin-top: 30px;
+	padding: 5px 100px 10px 100px;
+	font-size: 25px;
+}
+
+#start{	
+border:1px solid green;
+}
+
+#start:hover{
+	background-color: green;
+}
+
+#stop{
+	border:1px solid red;
+}
+
+#stop:hover{
+background-color: red;
+}
+/* timer */
+#time  {
+	font-size: 300px;
+	font-weight: bold;
+	margin-left: 225px;	
+}
+
+#time div {
+	display:inline;
+	font-size: 300px;
+	font-weight: bold;
+	margin-left:-125px;
+}
+
+#tseconds{
+	margin-left: 0px !important;
+}
+
+#prepare{
+	position:absolute;
+    height: 325px;
+    width:815px;
+	background-color: yellow;
+	margin-left:-99999px;
+	border-radius: 5px;
+	text-align:center;
+
+
+}
+
+#ptimer {
+
+  font-size:300px;
+  margin-bottom: 100px;
+ 
+
+}
