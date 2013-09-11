@@ -241,7 +241,6 @@ var reset = function(){
       if((rseconds > 0) && (rseconds < 10)){
           $("#tseconds").text("0" + rseconds);
       }else{
-          rseconds -= 1
           $("#tseconds").text(rseconds);
           };
     p = 10
