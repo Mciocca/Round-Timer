@@ -125,9 +125,11 @@ rtminutes = 0
 // Main functionality starts here
 
 var prep = null
-
 var rest = null
 var countdown = null
+var bell = document.getElementById("bell");
+var ten = document.getElementById("ten");
+var gong = document.getElementById("gong")
 
 $("#stop").click(function(){
   location.reload();
@@ -154,9 +156,7 @@ $("#start").click(function(){
    
 });
 
-var bell = document.getElementById("bell");
-var ten = document.getElementById("ten");
-var gong = document.getElementById("gong");
+;
 
 //end
 });
@@ -185,9 +185,9 @@ var counter = function(){
          $("#tminutes").text(rminutes)
          $("#tseconds").text(rseconds)          
       }else if((rminutes == 0) && (rseconds == 0) && (restTime == 0) && (rtotal != 1)){
+         gong.play();
          rtotal -= 1;
          restTime += 1;
-         gong.play();
         $("#tminutes").text(rtminutes);
          if(rtseconds < 10){
             $("#tseconds").text("0" + rtseconds);
