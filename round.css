@@ -90,10 +90,17 @@ footer ul li a:hover{
    border-radius: 5px;
    padding-right: 10px;
    margin-bottom:10px;
-
    }
 
+#tminutes{
+	margin-left:-25px;
+}
 
+#tseconds{
+	margin-left: -25px;
+}
+
+/* Controls */
 .counter-items{
 	margin-top:20px;
 	margin-left:-25px;
@@ -173,8 +180,12 @@ footer ul li a:hover{
 	border-bottom: 10px solid white;
 }
 
-/* Controls */
- 
+#time {
+	padding-right: 50px ;
+}
+
+
+ /* Start and Stop */
 #controls {
 	margin-right: -200px;
 	
@@ -243,5 +254,27 @@ background-color: red;
   font-size:300px;
   margin-bottom: 100px;
  
+
+}
+
+/* Responsive! */
+
+@media only screen and (max-width: 360px)  {
+
+.counter-items{
+	margin-top:20px;
+	margin-left:-25px;
+	width: 1000px;
+
+}
+
+.counter-items  div  {
+   margin-right:25px;
+
+}
+
+#instrutions{
+	display:hidden;
+}
 
 }
