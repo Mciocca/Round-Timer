@@ -1,280 +1,315 @@
-*{
-	font-family: sans-serif;
-	padding:0;
-	margin:0;
-	font-smooth:always;
-}
-body{
-	background-color: black;
-}
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  font-smooth: always; }
+
+body {
+  background-color: black; }
 
 .wrapper {
-width: 700px;
-margin: 0 auto;
+  width: 700px;
+  margin: 0 auto; }
 
-}
-h1	{
-	
-	height:25px;
-	color:red;
-	}
-h4{
-	color:white;
-}
-footer{
-	color:white;
-	margin-top:300px;
+h1 {
+  height: 25px;
+  color: red; }
 
-}
+h4 {
+  color: white; }
+
+footer {
+  color: white;
+  margin-top: 300px; }
 
 footer ul li {
-	float:right;
-	display:inline-block;
-	margin-right:25px;
-	color:white;
-	
-}
-footer ul li:first-child{
-	float:left;
-}
+  float: right;
+  display: inline-block;
+  margin-right: 25px;
+  color: white; }
 
-footer ul li a{ 
-	text-decoration: none;
-	color:white;
+footer ul li:first-child {
+  float: left; }
 
-}
+footer ul li a {
+  text-decoration: none;
+  color: white; }
 
-footer ul li a:hover{ 
-	text-decoration: none;
-	color:blue;
-
-}
+footer ul li a:hover {
+  text-decoration: none;
+  color: blue; }
 
 /* Counter Labels */
-
 #labels {
-	list-style-type: none;
-	margin-left:0px;
-}
-#labels li:first-child{
-	display:inline;
-	float:left;
-	margin-right:100px;
-}
+  list-style-type: none;
+  margin-left: 0px; }
 
-#labels li:last-child{
-	display:inline;
-	float:left;
-	margin-left:600px;
-	margin-top:-19px;
-}
+#labels li:first-child {
+  display: inline;
+  float: left;
+  margin-right: 100px; }
+
+#labels li:last-child {
+  display: inline;
+  float: left;
+  margin-left: 600px;
+  margin-top: -19px; }
 
 .text {
-	font-weight: bold;
-}
+  font-weight: bold; }
 
 .header {
-	background-color:gray;
-	margin-top:0px;
-	padding-top:0px;
-	height:40px;
-	margin-bottom:30px;
-}
+  background-color: gray;
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 40px;
+  margin-bottom: 30px; }
 
 /* Main Counter */
+#round-counter {
+  background-color: white;
+  height: 325px;
+  width: 800px;
+  border-radius: 5px;
+  padding-right: 10px;
+  margin-bottom: 10px; }
 
-#round-counter{
-   background-color:white;
-   height: 325px;
-   width:800px;
-   border-radius: 5px;
-   padding-right: 10px;
-   margin-bottom:10px;
-   }
+#tminutes {
+  margin-left: -25px; }
 
-#tminutes{
-	margin-left:-25px;
-}
-
-#tseconds{
-	margin-left: -25px;
-}
+#tseconds {
+  margin-left: -25px; }
 
 /* Controls */
-.counter-items{
-	margin-top:20px;
-	margin-left:-25px;
-	width: 1000px;
+.counter-items {
+  margin-top: 20px;
+  margin-left: -25px;
+  width: 1000px; }
 
-}
-
-.counter-items  div  {
-   display:inline-block;
-   margin-right:25px;
-
-}
+.counter-items div {
+  display: inline-block;
+  margin-right: 25px; }
 
 #rounds {
-	
-	background-color: green; 
-	height:25px;
-	width:200px;
-	padding: 5px ;
-}
+  background-color: green;
+  height: 25px;
+  width: 200px;
+  padding: 5px; }
 
 #round-time {
-	
-	background-color: orange; 
-	height:25px;
-	width:300px;
-	padding: 5px ;
-	font-weight: bold;
-}
+  background-color: orange;
+  height: 25px;
+  width: 300px;
+  padding: 5px;
+  font-weight: bold; }
 
 #rest {
-	
-	background-color: red; 
-	height:25px;
-	width:300px;
-	padding: 5px ;
-}
+  background-color: red;
+  height: 25px;
+  width: 300px;
+  padding: 5px; }
 
 .plus {
-	float:right;
-	width: 0; 
-	height: 0; 
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 10px solid black;
-}
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black; }
 
 .minus {
-	float:right;
-	width: 0; 
-	height: 0; 
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	
-	border-top: 10px solid black;
-
-}
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black; }
 
 .minus-minutes {
-	float:right;
-	width: 0; 
-	height: 0; 
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 10px solid white;
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white; }
 
-}
+.plus-minutes {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white; }
 
-
-
-.plus-minutes{
-	float:right;
-	width: 0; 
-	height: 0; 
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 10px solid white;
-}
-
-#time {
-	padding-right: 50px ;
-}
-
-
- /* Start and Stop */
+/* Start and Stop */
 #controls {
-	margin-right: -200px;
-	
-}
+  margin-right: -200px; }
 
 .control-button {
-	height:25px;
-	background-color:#5a4e51;
-	border-radius: 5px;
-	color:white;
-	display:inline-block;
-	float:right;
-	margin-right: 10px;
-	margin-top: 30px;
-	padding: 5px 100px 10px 100px;
-	font-size: 25px;
-}
+  height: 25px;
+  background-color: #5a4e51;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  margin-top: 30px;
+  padding: 5px 100px 10px 100px;
+  font-size: 25px; }
 
-#start{	
-border:1px solid green;
-}
+#start {
+  border: 1px solid green; }
 
-#start:hover{
-	background-color: green;
-}
+#start:hover {
+  background-color: green; }
 
-#stop{
-	border:1px solid red;
-}
+#stop {
+  border: 1px solid red; }
 
-#stop:hover{
-background-color: red;
-}
+#stop:hover {
+  background-color: red; }
+
 /* timer */
-#time  {
-	font-size: 300px;
-	font-weight: bold;
-	margin-left: 225px;	
-}
+#time {
+  font-size: 300px;
+  font-weight: bold;
+  margin-left: 225px; }
 
 #time div {
-	display:inline;
-	font-size: 300px;
-	font-weight: bold;
-	margin-left:-125px;
-}
+  display: inline;
+  font-size: 300px;
+  font-weight: bold;
+  margin-left: -125px; }
 
-#tseconds{
-	margin-left: 0px !important;
-}
+#tseconds {
+  margin-left: 0px !important; }
 
-#prepare{
-	position:absolute;
-    height: 325px;
-    width:815px;
-	background-color: yellow;
-	margin-left:-99999px;
-	border-radius: 5px;
-	text-align:center;
-
-
-}
+#prepare {
+  position: absolute;
+  height: 325px;
+  width: 815px;
+  background-color: yellow;
+  margin-left: -99999px;
+  border-radius: 5px;
+  text-align: center; }
 
 #ptimer {
+  font-size: 300px;
+  margin-bottom: 100px; }
 
-  font-size:300px;
-  margin-bottom: 100px;
+/* Mobile phones */
+
+@media only screen and (max-width: 360px ) {
+
+  .wrapper{
+    width:300px;
+  }
  
+ body {
+  background-color: black;
+ }
+
+ #instructions{
+  display: none;
+ }
+
+#round-counter{
+  width:250px;
+  height:110px;
+  margin-top: 10px;
+  margin-left:1px;
+ }
+
+#time {
+  font-size: 100px;
+  font-weight: bold;
+  }
+
+#time div{
+  font-size: 100px;
+  margin-left: -200px;
 
 }
 
-/* Responsive! */
+footer {
+  display:none;
+}
 
-@media only screen and (max-width: 360px)  {
+#prepare {
+  width:275px;
+  height:110px;
+  margin-top: px;
 
-.counter-items{
-	margin-top:20px;
-	margin-left:-25px;
-	width: 1000px;
+  }
+
+#ptimer {
+  font-size: 100px;
+  margin-bottom: px; }
+
+
+.header h1{
+  margin-left: 55px;
+}
+
+#labels{
+  display:block;
+  font-size: 15px;
+}
+
+#labels li:first-child {
+  display: block;
+  float: none;
+  margin-right: 0px; }
+
+#labels li:last-child {
+  display: block;
+  float: none;
+  margin-left: 0px;
+  margin-top: 0px; }
+
+
+#controls {
+  margin-right: 0px; }
+
+
+.control-button {
+  height: 25px;
+  width:20px;
+  color: white;
+  display: block;
+  float: none;
+  margin-right: 0px;
+  margin-left: 40px; 
+  margin-top: 20px;
+  font-size: 25px; 
+}
+
+.control-button span{
+  margin-left: -20px;
+}
+
+.counter-items {
+  margin-top: 20px;
+  margin-left: 0px;
+  display:block;
+  width: 1000px; 
+}
+
+.counter-items div {
+  display: block;
+  margin-right: 25px;
+  margin-top: 5px;
+}
+
+#r-seconds{
+  margin-top: -20px;
+  margin-left: 0px;
+
+}
+#round-time div {
+  display:inline-block;
 
 }
 
-.counter-items  div  {
-   margin-right:25px;
-
-}
-
-#instrutions{
-	display:hidden;
-}
 
 }
