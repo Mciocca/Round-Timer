@@ -194,9 +194,8 @@ var counter = function(){
          }else{
            $("#tseconds").text(rtseconds);
          }
-
-           
         $("#round-counter").css("background-color","red")
+
       }else if ((rtotal >= 1) && (restTime == 1)){
         rest();
        //main if 
@@ -233,10 +232,19 @@ var rest = function(){
 
 var reset = function(){
   $("#round-counter").css("background-color","white")
+  if(window.innerWidth <= 360 ){
+  // reset variables from mobile inputs
+    rminutes  = $(".mobile-round-minutes").val();
+    rseconds  = $(".mobile-round-seconds").val(); 
+    rtminutes = $(".mobile-rest-minutes").val();
+    rtseconds  = $(".mobile-rest-seconds").val();
+  }else{
+   //reset variables from desktop inputs
     rseconds = parseInt($("#round-time #r-seconds").text());
     rminutes = parseInt($("#round-time #r-minutes").text());
     rtseconds = parseInt($("#rest #rt-seconds").text());
     rtminutes = parseInt($("#rest #rt-minutes").text());
+  }
     $("#tminutes").text(rminutes);
       if((rseconds > 0) && (rseconds < 10)){
           $("#tseconds").text("0" + rseconds);
@@ -246,3 +254,4 @@ var reset = function(){
     p = 10
 
 }
+

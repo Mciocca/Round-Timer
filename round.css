@@ -4,11 +4,14 @@
   margin: 0;
   font-smooth: always; }
 
-body {
-  background-color: black; }
+body {background-color:#161717; }
+
+.mobile-select{
+  display:none;
+}
 
 .wrapper {
-  width: 700px;
+  width: 800px;
   margin: 0 auto; }
 
 h1 {
@@ -20,16 +23,21 @@ h4 {
 
 footer {
   color: white;
-  margin-top: 300px; }
+  margin-top: 200px; }
 
-footer ul li {
+footer * {
   float: right;
   display: inline-block;
   margin-right: 25px;
   color: white; }
 
-footer ul li:first-child {
-  float: left; }
+footer p {
+  float: left;
+  margin-left: 500px;
+}
+footer ul {
+  margin-right: 500px;
+}
 
 footer ul li a {
   text-decoration: none;
@@ -38,6 +46,22 @@ footer ul li a {
 footer ul li a:hover {
   text-decoration: none;
   color: blue; }
+
+#sites {
+  margin-left: 100px;
+}
+
+.header {
+  background-color: gray;
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 40px;
+  margin-bottom: 30px; }
+
+.header h1 {
+  width:250px;
+  margin: 0 auto;
+}
 
 /* Counter Labels */
 #labels {
@@ -58,12 +82,7 @@ footer ul li a:hover {
 .text {
   font-weight: bold; }
 
-.header {
-  background-color: gray;
-  margin-top: 0px;
-  padding-top: 0px;
-  height: 40px;
-  margin-bottom: 30px; }
+
 
 /* Main Counter */
 #round-counter {
@@ -142,8 +161,7 @@ footer ul li a:hover {
   border-bottom: 10px solid white; }
 
 /* Start and Stop */
-#controls {
-  margin-right: -200px; }
+
 
 .control-button {
   height: 25px;
@@ -201,13 +219,54 @@ footer ul li a:hover {
 
 @media only screen and (max-width: 360px ) {
 
+  #rounds {
+    display:none;
+  }
+
+  #round-time{
+    display:none;
+  }
+
+  #rest{
+    display:none;
+  }
+
+  .mobile-select{
+    display:block;
+  }
+
+  #number-label{
+    background-color: green;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  #length-label{
+    background-color: orange;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  #rest-label{
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+
   .wrapper{
     width:300px;
   }
  
- body {
-  background-color: black;
- }
+#labels{
+  margin-left: 0px;
+}
+
+#labels select{
+  margin-bottom: 10px
+}
 
  #instructions{
   display: none;
@@ -217,7 +276,8 @@ footer ul li a:hover {
   width:250px;
   height:110px;
   margin-top: 10px;
-  margin-left:1px;
+  margin-left:20px;
+  margin-bottom: 20px;
  }
 
 #time {
@@ -236,15 +296,15 @@ footer {
 }
 
 #prepare {
-  width:275px;
+  width:295px;
   height:110px;
-  margin-top: px;
+ 
 
   }
 
 #ptimer {
   font-size: 100px;
-  margin-bottom: px; }
+   }
 
 
 .header h1{
