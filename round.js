@@ -203,7 +203,11 @@ var counter = function(){
         reset();
         clearInterval(countdown);
         alert("Session Over!")
-        rtotal = parseInt($("#total-rounds").text());
+          if(window.innerWidth = 360){
+            rtotal=$("#mobile-round-count").val();
+          }else{
+            rtotal = parseInt($("#total-rounds").text());
+          }
         $("#start").show();
       }
     },1000);
