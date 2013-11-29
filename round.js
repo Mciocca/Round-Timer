@@ -203,8 +203,9 @@ var counter = function(){
         reset();
         clearInterval(countdown);
         alert("Session Over!")
-          if(window.innerWidth = 360){
+          if(window.innerWidth <= 600){
             rtotal=$("#mobile-round-count").val();
+            console.log(rtotal)
           }else{
             rtotal = parseInt($("#total-rounds").text());
           }
@@ -236,7 +237,7 @@ var rest = function(){
 
 var reset = function(){
   $("#round-counter").css("background-color","white")
-  if(window.innerWidth <= 360 ){
+  if(window.innerWidth <= 600 ){
   // reset variables from mobile inputs
     rminutes  = $(".mobile-round-minutes").val();
     rseconds  = $(".mobile-round-seconds").val(); 

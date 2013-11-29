@@ -21,35 +21,6 @@ h1 {
 h4 {
   color: white; }
 
-footer {
-  color: white;
-  margin-top: 200px; }
-
-footer * {
-  float: right;
-  display: inline-block;
-  margin-right: 25px;
-  color: white; }
-
-footer p {
-  float: left;
-  margin-left: 00px;
-}
-footer ul {
-  margin-right: 500px;
-}
-
-footer ul li a {
-  text-decoration: none;
-  color: white; }
-
-footer ul li a:hover {
-  text-decoration: none;
-  color: blue; }
-
-#sites {
-  margin-left: 100px;
-}
 
 .header {
   background-color: gray;
@@ -61,6 +32,30 @@ footer ul li a:hover {
 .header h1 {
   width:250px;
   margin: 0 auto;
+}
+
+footer{
+    margin-left: 100px;
+   margin-top: 175px;
+}
+
+footer * {
+  display:inline-block;
+  color:white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color:blue;
+}
+
+
+#sites{
+  margin-left: 200px;
+}
+
+#sites li{
+  margin-left: 5px;
 }
 
 /* Counter Labels */
@@ -215,9 +210,9 @@ footer ul li a:hover {
   font-size: 300px;
   margin-bottom: 100px; }
 
-/* Mobile phones */
+/* Mobile phones and low resolution screens */
 
-@media only screen and (max-width: 360px ) {
+@media only screen and (max-width: 600px ) {
 
   #rounds {
     display:none;
@@ -307,9 +302,7 @@ footer {
    }
 
 
-.header h1{
-  margin-left: 55px;
-}
+
 
 #labels{
   display:block;
