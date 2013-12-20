@@ -12,7 +12,7 @@ $(document).ready(function(){
      rtotal = rounds;
     });
 
-    $("#rounds .minus").click(function(){
+  $("#rounds .minus").click(function(){
   	  var rounds = parseInt($("#total-rounds").text());
   	    if(rounds > 0){
   		    rounds = rounds - 1;
