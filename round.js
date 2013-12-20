@@ -13,12 +13,12 @@ $(document).ready(function(){
     });
 
   $("#rounds .minus").click(function(){
-  	  var rounds = parseInt($("#total-rounds").text());
-  	    if(rounds > 0){
-  		    rounds = rounds - 1;
-  	    }
-      $("#total-rounds").text(rounds);
-      rtotal = rounds;
+    var rounds = parseInt($("#total-rounds").text());
+  	  if(rounds > 0){
+  		  rounds = rounds - 1;
+  	   }
+    $("#total-rounds").text(rounds);
+    rtotal = rounds;
     });
 
 // Round time controls seconds
