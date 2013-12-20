@@ -6,17 +6,17 @@ $(document).ready(function(){
   // # of rounds control
   rtotal = 0
   $("#rounds .plus").click(function(){
-  	var rounds = parseInt($("#total-rounds").text());
-  	rounds = rounds + 1;
-  	$("#total-rounds").text(rounds);
-     rtotal = rounds;
-    });
+    var rounds = parseInt($("#total-rounds").text());
+    rounds = rounds + 1;
+    $("#total-rounds").text(rounds);
+    rtotal = rounds;
+   });
 
   $("#rounds .minus").click(function(){
     var rounds = parseInt($("#total-rounds").text());
-  	  if(rounds > 0){
-  		  rounds = rounds - 1;
-  	   }
+      if(rounds > 0){
+        rounds = rounds - 1;
+      }
     $("#total-rounds").text(rounds);
     rtotal = rounds;
     });
