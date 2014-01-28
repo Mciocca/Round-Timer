@@ -32,12 +32,12 @@ $(document).ready(function(){
       if (seconds < 10){
         $("#round-time #r-seconds").text("0"+seconds);
         $("#tseconds").text("0" + seconds);
+        rseconds = seconds; 
+      }else{
+        $("#round-time #r-seconds").text(seconds);
+        $("#tseconds").text(seconds);
         rseconds = seconds;
-      }
-    }else{
-      $("#round-time #r-seconds").text(seconds);
-      $("#tseconds").text(seconds);
-      rseconds = seconds;
+      }    
     }
   }); 
 
@@ -49,12 +49,12 @@ $(document).ready(function(){
         $("#round-time #r-seconds").text("0"+seconds);
         $("#tseconds").text("0" + seconds);
         rseconds = seconds;
+      }else{
+        $("#round-time #r-seconds").text(seconds);
+        $("#tseconds").text(seconds);
+        rseconds = seconds;   
       }
-    }else{
-      $("#round-time #r-seconds").text(seconds);
-      $("#tseconds").text(seconds);
-      rseconds = seconds;   
-    }
+    }  
   });
 
   // Round time controls minutes 
@@ -87,10 +87,10 @@ rtminutes = 0
       if (seconds < 10){
     	  $("#rest #rt-seconds").text("0"+seconds);
         rtseconds = seconds;
+      }else{
+        $("#rest #rt-seconds").text(seconds);	
+        rtseconds = seconds;
       }
-    }else{
-      $("#rest #rt-seconds").text(seconds);	
-      rtseconds = seconds;
    }
 });
 
@@ -101,10 +101,10 @@ rtminutes = 0
         if(seconds < 10){
     	    $("#rest #rt-seconds").text("0"+seconds);
           rtseconds = seconds;
+        }else{
+          $("#rest #rt-seconds").text(seconds);	
+          rtseconds = seconds;
         }
-      }else{
-        $("#rest #rt-seconds").text(seconds);	
-        rtseconds = seconds;
       }
   });
 
