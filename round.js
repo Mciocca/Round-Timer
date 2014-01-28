@@ -171,7 +171,7 @@ var counter = function(){
         if((rseconds > -1) && (rseconds < 10)){
           rseconds -= 1;
           $("#tseconds").text("0" + rseconds);
-        }else if(rseconds == 10){
+        }else if((rseconds == 10) && (rminutes == 0)){
           ten.play();
           rseconds -=1;
           $("#tseconds").text("0"+rseconds);
