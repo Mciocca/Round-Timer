@@ -2,7 +2,7 @@
   font-family: sans-serif;
   padding: 0;
   margin: 0;
-  font-smooth: always; }
+ }
 
 body {background-color:#161717; }
 
@@ -66,12 +66,13 @@ footer a:hover {
 #labels li:first-child {
   display: inline;
   float: left;
-  margin-right: 100px; }
+  margin-left: -27px;
+  margin-right: 92px; }
 
 #labels li:last-child {
   display: inline;
   float: left;
-  margin-left: 600px;
+  margin-left: 555px;
   margin-top: -19px; }
 
 .text {
@@ -86,7 +87,9 @@ footer a:hover {
   width: 800px;
   border-radius: 5px;
   padding-right: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-align: center; 
+}
 
 #tminutes {
   margin-left: -25px; }
@@ -313,7 +316,10 @@ footer {
 #labels li:first-child {
   display: block;
   float: none;
-  margin-right: 0px; }
+  margin-right: 0px;
+  width: 300px;
+  margin-left: 1px;
+   }
 
 #labels li:last-child {
   display: block;

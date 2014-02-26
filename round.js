@@ -124,6 +124,40 @@ rtminutes = 0
     }
   });
 
+
+// mobile controls
+
+$(".mobile-round-count").change(function(){
+  rtotal = parseInt($(this).val());
+  console.log(rtotal)
+});
+
+$(".mobile-round-minutes").change(function() {
+  var min = parseInt($(this).val());
+  rminutes = min;
+  console.log(rminutes);
+  $("#tminutes").text(rminutes);
+});
+
+$( ".mobile-round-seconds" ).change(function() {
+  var seconds = parseInt($(this).val());
+  rseconds = seconds;
+  console.log(rseconds);
+  $("#tseconds").text(rseconds);
+});
+
+$(".mobile-rest-minutes").change(function(){
+  var minutes = parseInt($(this).val());
+  rtminutes = minutes;
+  console.log(rtminutes)
+});
+
+$(".mobile-rest-seconds").change(function(){
+  var seconds = parseInt($(this).val());
+  rtseconds = seconds;
+  console.log(seconds);
+});
+
 //Main functionality starts here
 //set interval functions to null to prevent running on window load
 var prep = null;
@@ -143,10 +177,13 @@ $("#stop").click(function(){
 //start 10 second prep timer
 p = 10;
 $("#start").click(function(){
-  $("#start").hide();
-  $("#prepare").css("margin-left","0");
-  $("#ptimer").text(p);
-  var prep = setInterval(function(){
+  if(rtotal == 0){
+    alert("You must set the number of rounds");
+  }else{
+    $("#start").hide();
+    $("#prepare").css("margin-left","0");
+    $("#ptimer").text(p);
+    var prep = setInterval(function(){
     p -= 1;
     $("#ptimer").text(p);
     //start main timer at the end of the prep timer, hide prep timer
@@ -158,6 +195,7 @@ $("#start").click(function(){
     }
    //prep end
    }, 1000); 
+  }
   });
 //end
 });
@@ -242,6 +280,7 @@ var reset = function(){
       rseconds  = $(".mobile-round-seconds").val(); 
       rtminutes = $(".mobile-rest-minutes").val();
       rtseconds  = $(".mobile-rest-seconds").val();
+      rtotal = $(".mobile-round-count").val();
     }else{
       //reset variables from desktop inputs
       rseconds = parseInt($("#round-time #r-seconds").text());
