@@ -1,154 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Round Timer | Workout, Boxing, and MMA timer</title>
-	<meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="css/round.min.css">
-  <link rel="icon" type="image/icp" href="favicon.ico">
-  <meta name="description" content="A round timer for use with martial arts, boxing, mma and interval training">
-  <!-- Google analytics -->
-  <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-41027763-2']);
-  _gaq.push(['_trackPageview']);
+  <title>Round Timer | Workout, Boxing, and MMA timer</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/round.min.css">
+    <link rel="icon" type="image/icp" href="favicon.ico">
+    <meta name="description" content="A round timer for use with martial arts, boxing, mma and interval training">
+    <!-- Google analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-41027763-2']);
+      _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
- </script>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
 
 </head>
 <body>
-	<div class="header">
-	  <h1>ROUND TIMER!</h1>
-	</div>
+  <div class="header">
+    <h1>ROUND TIMER!</h1>
+  </div>
 	
   <div class="wrapper">
-		<h3 style="color:white;" id="instructions">White buttons add minutes, black buttons add seconds!</h3>
-		<div id="prepare">
+    <h3 style="color:white;" id="instructions">White buttons add minutes, black buttons add seconds!</h3>
+    <div id="prepare">
     <div id="ptimer"></div>
-	</div>
+  </div>
      
-	<div id="round-counter">
-		<div id="time"><div id="tminutes">0</div><span>:</span><div id="tseconds">00</div></div>
-	</div>
+  <div id="round-counter">
+    <div id="time"><div id="tminutes">0</div><span>:</span><div id="tseconds">00</div></div>
+  </div>
   <!-- BEGIN mobile controls. Used to simplify input on smaller devices -->
     <ul id="labels">
-	    <li id="number-label">
-	      <h4>Number of Rounds:</h4>
-	      <div class="mobile-select">
-	      <select class="mobile-round-count">
-	        <option value="0">0</option>
-    		  <option value="1">1</option>
-    		  <option value="2">2</option>
-    		  <option value="3">3</option>
-    		  <option value="4">4</option>
-    		  <option value="5">5</option>
-    		  <option value="6">6</option>
-    		  <option value="7">7</option>
-    		  <option value="8">8</option>
-    	  	<option value="9">9</option>
-    		  <option value="10">10</option>
+      <li id="number-label">
+        <h4>Number of Rounds:</h4>
+	<div class="mobile-select">
+	  <select class="mobile-round-count">
+	    <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+    	    <option value="3">3</option>
+            <option value="4">4</option>
+    	    <option value="5">5</option>
+    	    <option value="6">6</option>
+    	    <option value="7">7</option>
+    	    <option value="8">8</option>
+            <option value="9">9</option>
+    	    <option value="10">10</option>
     	  </select>
-	    </div>
-	  </li>
+	</div>
+       </li>
 
 	  <li id="length-label">
 	    <h4>Round Length:</h4>
 	    <div class="mobile-select">
-	  	<select class="mobile-round-minutes">
-	  	  <option value="0">0</option>
-    		<option value="1">1</option>
-    		<option value="2">2</option>
-    		<option value="3">3</option>
-    		<option value="4">4</option>
-    		<option value="5">5</option>
-    		<option value="6">6</option>
-    		<option value="7">7</option>
-    		<option value="8">8</option>
-    		<option value="9">9</option>
-    		<option value="10">10</option>
-    	</select>
+	    <select class="mobile-round-minutes">
+	      <option value="0">0</option>
+    	      <option value="1">1</option>
+    	      <option value="2">2</option>
+    	      <option value="3">3</option>
+    	      <option value="4">4</option>
+    	      <option value="5">5</option>
+    	      <option value="6">6</option>
+    	      <option value="7">7</option>
+    	      <option value="8">8</option>
+    	      <option value="9">9</option>
+    	      <option value="10">10</option>
+    	    </select>
           <span>:</span>
-    	<select class="mobile-round-seconds" >
-    		<option value="0">00</option>
-    		<option value="15">15</option>
-    		<option value="30">30</option>
-    		<option value="45">45</option>
-    	</select>
-	  	</div>
-	  </li>
-	  
-	  <li id="rest-label">
- 	    <h4>Rest:</h4>
-      <div class="mobile-select">
-	  	<select class="mobile-rest-minutes">
-	  	  <option value="0">0</option>
-    		<option value="1">1</option>
-    		<option value="2">2</option>
-    		<option value="3">3</option>
-    		<option value="4">4</option>
-    		<option value="5">5</option>
-    		<option value="6">6</option>
-    		<option value="7">7</option>
-    		<option value="8">8</option>
-    		<option value="9">9</option>
-    		<option value="10">10</option>
+    	  <select class="mobile-round-seconds" >
+    	    <option value="0">00</option>
+    	    <option value="15">15</option>
+    	    <option value="30">30</option>
+    	    <option value="45">45</option>
     	  </select>
-            <span>:</span>
-    	<select class="mobile-rest-seconds">
-    		<option value="0">00</option>
-    		<option value="15">15</option>
-    		<option value="30">30</option>
-    		<option value="45">45</option>
+	  </div>
+	 </li>
+	  
+    <li id="rest-label">
+      <h4>Rest:</h4>
+      <div class="mobile-select">
+        <select class="mobile-rest-minutes">
+	  <option value="0">0</option>
+    	  <option value="1">1</option>
+    	  <option value="2">2</option>
+    	  <option value="3">3</option>
+    	  <option value="4">4</option>
+    	  <option value="5">5</option>
+    	  <option value="6">6</option>
+    	  <option value="7">7</option>
+    	  <option value="8">8</option>
+    	  <option value="9">9</option>
+    	  <option value="10">10</option>
     	</select>
-	  	</div>        
-	  </li>
+        <span>:</span>
+    	<select class="mobile-rest-seconds">
+    	  <option value="0">00</option>
+    	  <option value="15">15</option>
+    	  <option value="30">30</option>
+    	  <option value="45">45</option>
+    	</select>
+      </div>        
+    </li>
     </ul>
  <!-- END mobile input -->
 
 <!-- BEGIN desktop input -->
 <div class="counter-items">
-	<div id="rounds" >
-		<span class="text" id="total-rounds">0</span>
+  <div id="rounds" >
+    <span class="text" id="total-rounds">0</span>
     <div class="plus"></div>
     <div class="minus"></div>
   </div>
         
-	<div id="round-time" >
-		<span id="r-minutes">0</span>:<div id="r-seconds">00</div>
-		<div class="plus"></div>
+  <div id="round-time" >
+    <span id="r-minutes">0</span>:<div id="r-seconds">00</div>
+    <div class="plus"></div>
     <div class="minus"></div>
     <div class="plus-minutes" ></div>
     <div class="minus-minutes"></div>
   </div>
           
-	<div id="rest" class="text">
-	  <span id="rt-minutes">0</span>:<span id="rt-seconds">00</span>
-      <div class="plus"></div>
-      <div class="minus"></div>
-      <div class="plus-minutes"></div>
-      <div class="minus-minutes"></div>
-	</div>
+  <div id="rest" class="text">
+    <span id="rt-minutes">0</span>:<span id="rt-seconds">00</span>
+    <div class="plus"></div>
+    <div class="minus"></div>
+    <div class="plus-minutes"></div>
+    <div class="minus-minutes"></div>
+  </div>
 
 </div>
 <!-- END desktop input -->
 <div id="controls">
-	<div class="control-button" id="start"><span class="text">Start</span></div>
-	<div class="control-button" id="stop"><span class="text">Stop</span></div>
+  <div class="control-button" id="start"><span class="text">Start</span></div>
+  <div class="control-button" id="stop"><span class="text">Stop</span></div>
 </div>
 
 <audio id="bell"  autostart="false" src="sounds/bell.mp3" preload="auto" hidden="true">Your browser does not support HTML5 sounds. You will not hear any sounds! Please use <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a></audio>
 <audio id="gong" autostart="false" src="sounds/gong.mp3" preload="auto" hidden="true"></audio>
 <audio id="ten" autostart="false" src="sounds/alert.mp3" preload="auto" hidden="true"></audio>
 
-
 <footer>
-	
   <p>Created by Michael Ciocca</p>
-
   <ul id="sites">
     <li><a href="http://www.github.com/mciocca">Github</a></li>
     <li><a href="http://www.michaelciocca.com">Blog</a></li>
