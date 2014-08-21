@@ -24,68 +24,68 @@
   <div class="header">
     <h1>ROUND TIMER!</h1>
   </div>
-	
+
   <div class="wrapper">
     <h3 style="color:white;" id="instructions">White buttons add minutes, black buttons add seconds!</h3>
     <div id="prepare">
     <div id="ptimer"></div>
   </div>
-     
+
   <div id="round-counter">
     <div id="time"><div id="tminutes">0</div><span>:</span><div id="tseconds">00</div></div>
   </div>
   <!-- BEGIN mobile controls. Used to simplify input on smaller devices -->
-    <ul id="labels">
-      <li id="number-label">
-        <h4>Number of Rounds:</h4>
-	<div class="mobile-select">
-	  <select class="mobile-round-count">
-	    <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-    	    <option value="3">3</option>
-            <option value="4">4</option>
-    	    <option value="5">5</option>
-    	    <option value="6">6</option>
-    	    <option value="7">7</option>
-    	    <option value="8">8</option>
-            <option value="9">9</option>
-    	    <option value="10">10</option>
-    	  </select>
-	</div>
-       </li>
-
-	  <li id="length-label">
-	    <h4>Round Length:</h4>
-	    <div class="mobile-select">
-	    <select class="mobile-round-minutes">
+  <ul id="labels">
+    <li id="number-label">
+    <h4>Number of Rounds:</h4>
+	  <div class="mobile-select">
+	    <select class="mobile-round-count">
 	      <option value="0">0</option>
-    	      <option value="1">1</option>
-    	      <option value="2">2</option>
-    	      <option value="3">3</option>
-    	      <option value="4">4</option>
-    	      <option value="5">5</option>
-    	      <option value="6">6</option>
-    	      <option value="7">7</option>
-    	      <option value="8">8</option>
-    	      <option value="9">9</option>
-    	      <option value="10">10</option>
-    	    </select>
-          <span>:</span>
+        <option value="1">1</option>
+        <option value="2">2</option>
+    	  <option value="3">3</option>
+        <option value="4">4</option>
+    	  <option value="5">5</option>
+    	  <option value="6">6</option>
+    	  <option value="7">7</option>
+    	  <option value="8">8</option>
+        <option value="9">9</option>
+    	  <option value="10">10</option>
+      </select>
+	  </div>
+    </li>
+
+    <li id="length-label">
+      <h4>Round Length:</h4>
+      <div class="mobile-select">
+        <select class="mobile-round-minutes">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+    	  </select>
+        <span>:</span>
     	  <select class="mobile-round-seconds" >
     	    <option value="0">00</option>
     	    <option value="15">15</option>
     	    <option value="30">30</option>
     	    <option value="45">45</option>
     	  </select>
-	  </div>
-	 </li>
-	  
+	    </div>
+    </li>
+
     <li id="rest-label">
-      <h4>Rest:</h4>
-      <div class="mobile-select">
-        <select class="mobile-rest-minutes">
-	  <option value="0">0</option>
+    <h4>Rest:</h4>
+    <div class="mobile-select">
+      <select class="mobile-rest-minutes">
+        <option value="0">0</option>
     	  <option value="1">1</option>
     	  <option value="2">2</option>
     	  <option value="3">3</option>
@@ -97,14 +97,14 @@
     	  <option value="9">9</option>
     	  <option value="10">10</option>
     	</select>
-        <span>:</span>
+      <span>:</span>
     	<select class="mobile-rest-seconds">
     	  <option value="0">00</option>
     	  <option value="15">15</option>
     	  <option value="30">30</option>
     	  <option value="45">45</option>
     	</select>
-      </div>        
+      </div>
     </li>
   </ul>
  <!-- END mobile input -->
@@ -116,7 +116,7 @@
     <div class="plus"></div>
     <div class="minus"></div>
   </div>
-        
+
   <div id="round-time" >
     <span id="r-minutes">0</span>:<div id="r-seconds">00</div>
     <div class="plus"></div>
@@ -124,7 +124,7 @@
     <div class="plus-minutes" ></div>
     <div class="minus-minutes"></div>
   </div>
-          
+
   <div id="rest" class="text">
     <span id="rt-minutes">0</span>:<span id="rt-seconds">00</span>
     <div class="plus"></div>
