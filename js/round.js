@@ -1,7 +1,3 @@
-/* Notes: A function that formats seconds correctly 
-          causes the timer to hang when the function is called
-  */
-
 $(document).ready(function(){
   //timer variables
   var totalRounds = 0,
