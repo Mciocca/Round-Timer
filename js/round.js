@@ -5,7 +5,8 @@ $(document).ready(function(){
       roundSeconds = 0,
       restSeconds = 0,
       restMinutes = 0,
-//Main functionality variables 
+      restTime = false,
+//Main functionality variables
 //set interval functions to null to prevent running on window load
       prep = null,
       rest = null,
@@ -35,22 +36,22 @@ $(document).ready(function(){
     totalRounds = rounds;
     });
 
-// Round time controls 
+// Round time controls
   $("#round-time .plus").click(function(){
     var seconds = parseInt($("#round-time #r-seconds").text());
-    seconds = seconds + 1 
+    seconds = seconds + 1
     if (seconds < 60){
       if (seconds < 10){
         $("#round-time #r-seconds").text("0"+seconds);
         $("#tseconds").text("0" + seconds);
-        roundSeconds = seconds; 
+        roundSeconds = seconds;
       }else{
         $("#round-time #r-seconds").text(seconds);
         $("#tseconds").text(seconds);
         roundSeconds = seconds;
-      }    
+      }
     }
-  }); 
+  });
 
  $("#round-time .minus").click(function(){
     var seconds = parseInt($("#round-time #r-seconds").text());
@@ -63,19 +64,19 @@ $(document).ready(function(){
       }else{
         $("#round-time #r-seconds").text(seconds);
         $("#tseconds").text(seconds);
-        roundSeconds = seconds;   
+        roundSeconds = seconds;
       }
-    }  
+    }
   });
 
-   
+
  $("#round-time .plus-minutes").click(function(){
     var minutes = parseInt($("#round-time #r-minutes").text());
-    minutes = minutes + 1; 
+    minutes = minutes + 1;
     $("#round-time #r-minutes").text(minutes);
     $("#tminutes").text(minutes);
     roundMinutes = minutes;
-  }); 
+  });
 
   $("#round-time .minus-minutes").click(function(){
     var minutes = parseInt($("#round-time #r-minutes").text());
@@ -84,9 +85,9 @@ $(document).ready(function(){
       $("#round-time #r-minutes").text(minutes)
       $("#tminutes").text(minutes)};
       roundMinutes = minutes;
-     }); 
+     });
 
-//rest controls 
+//rest controls
  $("#rest .plus").click(function(){
     var seconds = parseInt($("#rest #rt-seconds").text());
     seconds = seconds +1
@@ -95,7 +96,7 @@ $(document).ready(function(){
     	  $("#rest #rt-seconds").text("0"+seconds);
         restSeconds = seconds;
       }else{
-        $("#rest #rt-seconds").text(seconds);	
+        $("#rest #rt-seconds").text(seconds);
         restSeconds = seconds;
       }
    }
@@ -103,13 +104,13 @@ $(document).ready(function(){
 
   $("#rest .minus").click(function(){
     var seconds = parseInt($("#rest #rt-seconds").text());
-    seconds = seconds -1  
+    seconds = seconds -1
       if(seconds >(-1) ){
         if(seconds < 10){
     	    $("#rest #rt-seconds").text("0"+seconds);
           restSeconds = seconds;
         }else{
-          $("#rest #rt-seconds").text(seconds);	
+          $("#rest #rt-seconds").text(seconds);
           restSeconds = seconds;
         }
       }
@@ -117,14 +118,14 @@ $(document).ready(function(){
 
  $("#rest .plus-minutes").click(function(){
    var min = parseInt($("#rest #rt-minutes").text());
-   min = min +1;    
-   $("#rest #rt-minutes").text(min); 
+   min = min +1;
+   $("#rest #rt-minutes").text(min);
    restMinutes = min;
  });
 
  $("#rest .minus-minutes").click(function(){
    var min = parseInt($("#rest #rt-minutes").text());
-   min = min -1;  
+   min = min -1;
     if(min >(-1) ){
       $("#rest #rt-minutes").text(min);
       restMinutes = min;
@@ -189,10 +190,71 @@ $("#start").click(function(){
       counter();
     }
    //prep end
-   }, 1000); 
+   }, 1000);
   }
 });
 
+var counter = function(){
+  var countdown = setInterval(function(){
+    switch(true){
+      case ((totalRounds > 0) && (roundSeconds > 0) && (!restTime)):
+        if((roundSeconds > -1) && (roundSeconds < 10)){
+          roundSeconds -= 1;
+          $("#tseconds").text("0" + roundSeconds);
+        }else if((roundSeconds == 10) && (roundMinutes == 0)){
+          ten.play();
+          roundSeconds -=1;
+          $("#tseconds").text("0"+roundSeconds);
+        }else{
+          roundSeconds -= 1;
+          $("#tseconds").text(roundSeconds);
+        }
+      break;
+
+      case ((roundSeconds == 0) && (roundMinutes >0)) :
+        roundMinutes -= 1;
+        roundSeconds = 59;
+        $("#tminutes").text(roundMinutes);
+        $("#tseconds").text(roundSeconds);
+      break;
+
+      case ((roundMinutes == 0) && (roundSeconds == 0) && (!restTime) && (totalRounds != 1)):
+        gong.play();
+        totalRounds -= 1;
+        restTime = true;
+        $("#tminutes").text(restMinutes);
+        //format seconds correctly
+        if(restSeconds < 10){
+          $("#tseconds").text("0" + restSeconds);
+        }else{
+          $("#tseconds").text(restSeconds);
+        }
+        $("#round-counter").css("background-color","red");
+      break;
+
+      case ((totalRounds >= 1) && (restTime)):
+        rest();
+      break;
+
+      default:
+        timerReset();
+        clearInterval(countdown);
+        alert("Session Over!");
+        //reset totalRounds for low res windows
+        if(window.innerWidth <= 600){
+          totalRounds=$("#mobile-round-count").val();
+        }else{
+          totalRounds = parseInt($("#total-rounds").text());
+        }
+        $("#start").show();
+    }
+  }, 1000);
+}
+
+/*
+#################################################################
+Counter built using else-if, removed in favor of switch statement
+#################################################################
 var counter = function(){
   restTime = 0;
     var countdown = setInterval(function(){
@@ -208,12 +270,12 @@ var counter = function(){
         }else{
           roundSeconds -= 1;
           $("#tseconds").text(roundSeconds);
-        }  
+        }
       }else if((roundSeconds == 0) && (roundMinutes >0)){
         roundMinutes -= 1;
         roundSeconds = 59;
         $("#tminutes").text(roundMinutes);
-        $("#tseconds").text(roundSeconds);         
+        $("#tseconds").text(roundSeconds);
       }else if((roundMinutes == 0) && (roundSeconds == 0) && (restTime == 0) && (totalRounds != 1)){
         gong.play();
         totalRounds -= 1;
@@ -230,7 +292,7 @@ var counter = function(){
         rest();
        //end of main if statement
       }else{
-        reset();
+        timerReset();
         clearInterval(countdown);
         alert("Session Over!");
         //reset totalRounds for low res windows
@@ -242,10 +304,10 @@ var counter = function(){
         $("#start").show();
       }
     },1000);
-}
+}*/
 
 //rest time
-var rest = function(){ 
+var rest = function(){
   if((restSeconds > 0) && (restSeconds <= 10)){
      restSeconds -= 1;
      $("#tseconds").text("0" + restSeconds);
@@ -258,18 +320,18 @@ var rest = function(){
     $("#tminutes").text(restMinutes);
     $("#tseconds").text(restSeconds);
   }else{
-    restTime -=1;
+    restTime = false;
     bell.play();
-    reset(); 
+    timerReset();
  }
 }
 //resest all variables
-var reset = function(){
+var timerReset = function(){
   $("#round-counter").css("background-color","white");
     // reset variables from mobile inputs
     if(window.innerWidth <= 600 ){
       roundMinutes  = $(".mobile-round-minutes").val();
-      roundSeconds  = $(".mobile-round-seconds").val(); 
+      roundSeconds  = $(".mobile-round-seconds").val();
       restMinutes = $(".mobile-rest-minutes").val();
       restSeconds  = $(".mobile-rest-seconds").val();
       totalRounds = $(".mobile-round-count").val();
