@@ -1,0 +1,375 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+ }
+
+body {background-color:#161717; }
+
+.mobile-select{
+  display:none;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 0 auto; }
+
+h1 {
+  height: 25px;
+  color: red; }
+
+h4 {
+  color: white; }
+
+
+.header {
+  background-color: gray;
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 40px;
+  margin-bottom: 30px; }
+
+.header h1 {
+  width:250px;
+  margin: 0 auto;
+}
+
+footer{
+    margin-left: 100px;
+   margin-top: 175px;
+}
+
+footer * {
+  display:inline-block;
+  color:white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color:blue;
+}
+
+
+#sites{
+  margin-left: 200px;
+}
+
+#sites li{
+  margin-left: 5px;
+}
+
+/* Counter Labels */
+#labels {
+  list-style-type: none;
+  margin-left: 0px; }
+
+#labels li:first-child {
+  display: inline;
+  float: left;
+  margin-left: -27px;
+  margin-right: 92px; }
+
+#labels li:last-child {
+  display: inline;
+  float: left;
+  margin-left: 555px;
+  margin-top: -19px; }
+
+.text {
+  font-weight: bold; }
+
+
+
+/* Main Counter */
+#round-counter {
+  background-color: white;
+  height: 325px;
+  width: 800px;
+  border-radius: 5px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+#tminutes {
+  margin-left: -25px; }
+
+#tseconds {
+  margin-left: -25px; }
+
+/* Controls */
+.counter-items {
+  margin-top: 20px;
+  margin-left: -25px;
+  width: 1000px; }
+
+.counter-items div {
+  display: inline-block;
+  margin-right: 25px; }
+
+#rounds {
+  background-color: green;
+  height: 25px;
+  width: 200px;
+  padding: 5px; }
+
+#round-time {
+  background-color: orange;
+  height: 25px;
+  width: 300px;
+  padding: 5px;
+  font-weight: bold; }
+
+#rest {
+  background-color: red;
+  height: 25px;
+  width: 300px;
+  padding: 5px; }
+
+.plus {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black; }
+
+.minus {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black; }
+
+.minus-minutes {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white; }
+
+.plus-minutes {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white; }
+
+/* Start and Stop */
+
+
+.control-button {
+  height: 25px;
+  background-color: #5a4e51;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  margin-top: 30px;
+  padding: 5px 100px 10px 100px;
+  font-size: 25px; }
+
+#start {
+  border: 1px solid green; }
+
+#start:hover {
+  background-color: green; }
+
+#stop {
+  border: 1px solid red; }
+
+#stop:hover {
+  background-color: red; }
+
+/* timer */
+#time {
+  font-size: 300px;
+  font-weight: bold;
+  margin-left: 165px; }
+
+#time div {
+  display: inline;
+  font-size: 300px;
+  font-weight: bold;
+  margin-left: -125px; }
+
+#tseconds {
+  margin-left: 0px !important; }
+
+#prepare {
+  position: absolute;
+  height: 325px;
+  width: 815px;
+  background-color: yellow;
+  margin-left: -99999px;
+  border-radius: 5px;
+  text-align: center; }
+
+#ptimer {
+  font-size: 300px;
+  margin-bottom: 100px; }
+
+/* Mobile phones and low resolution screens */
+
+@media only screen and (max-width: 600px ) {
+
+  #rounds {
+    display:none;
+  }
+
+  #round-time{
+    display:none;
+  }
+
+  #rest{
+    display:none;
+  }
+
+  .mobile-select{
+    display:block;
+  }
+
+  #number-label{
+    background-color: green;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  #length-label{
+    background-color: orange;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  #rest-label{
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+
+  .wrapper{
+    width:300px;
+  }
+ 
+#labels{
+  margin-left: 0px;
+}
+
+#labels select{
+  margin-bottom: 10px
+}
+
+ #instructions{
+  display: none;
+ }
+
+#round-counter{
+  width:250px;
+  height:110px;
+  margin-top: 10px;
+  margin-left:20px;
+  margin-bottom: 20px;
+ }
+
+#time {
+  font-size: 100px;
+  font-weight: bold;
+  margin-left: 200px;
+  }
+
+#time div{
+  font-size: 100px;
+  margin-left: -200px;
+
+}
+
+footer {
+  display:none;
+}
+
+#prepare {
+  width:295px;
+  height:110px;
+ 
+
+  }
+
+#ptimer {
+  font-size: 100px;
+   }
+
+
+
+
+#labels{
+  display:block;
+  font-size: 15px;
+}
+
+#labels li:first-child {
+  display: block;
+  float: none;
+  margin-right: 0px;
+  width: 300px;
+  margin-left: 1px;
+   }
+
+#labels li:last-child {
+  display: block;
+  float: none;
+  margin-left: 0px;
+  margin-top: 0px; }
+
+
+#controls {
+  margin-right: 0px; }
+
+
+.control-button {
+  height: 25px;
+  width:20px;
+  color: white;
+  display: block;
+  float: none;
+  margin-right: 0px;
+  margin-left: 40px; 
+  margin-top: 20px;
+  font-size: 25px; 
+}
+
+.control-button span{
+  margin-left: -20px;
+}
+
+.counter-items {
+  margin-top: 20px;
+  margin-left: 0px;
+  display:block;
+  width: 1000px; 
+}
+
+.counter-items div {
+  display: block;
+  margin-right: 25px;
+  margin-top: 5px;
+}
+
+#r-seconds{
+  margin-top: -20px;
+  margin-left: 0px;
+
+}
+#round-time div {
+  display:inline-block;
+
+}
+
+
+}
